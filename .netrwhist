@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/cryhavoc21/proj/intellichoice-db/db'
+let g:netrw_dirhist_2='/home/cryhavoc21/proj/intellichoice-db/db/models'
+let g:netrw_dirhist_3='/home/cryhavoc21/proj/intellichoice-db/intellichoice-api/models'
+let g:netrw_dirhist_4='/home/cryhavoc21/proj/itk_examples/SeriesReader'
+let g:netrw_dirhist_5='/home/cryhavoc21/proj/cga-mri-viewer'
+let g:netrw_dirhist_6='/home/cryhavoc21/utd/db/proj1/.git'
