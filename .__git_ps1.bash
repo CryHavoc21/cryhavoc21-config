@@ -1,5 +1,12 @@
 #!/bin/bash
 
+__git_eread () 
+{ 
+    local f="$1";
+    shift;
+    test -r "$f" && read "$@" < "$f"
+}
+
 __git_ps1 () 
 { 
     local exit=$?;
