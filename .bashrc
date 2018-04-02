@@ -59,8 +59,16 @@ exitcode() {
     fi
 }
 
+prompt_if_root() {
+    if [ $(id -u) == "0" ]; then
+        printf "\e[01;91m"
+    else
+        printf "\e[01;32m"
+    fi
+}
+
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\[\e[01;96m\]$(__git_ps1)\[\e[00m\]\n$(exitcode)\$\[\e[00m\] '
+    PS1='$(prompt_if_root)\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\[\e[01;96m\]$(__git_ps1)\[\e[00m\]$(exitcode)\$\[\e[00m\] '
 else
     PS1='\u@\h:\w\n\$ '
 fi
