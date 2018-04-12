@@ -28,6 +28,7 @@ filetype plugin on
 set path+=**
 set wildmenu
 command! MakeTags !ctags -R .
+command! MakeImpl %s/;/ {\r    \r}\r/g
 set showcmd
 
 "set folding to work: zo to open, zc to close. zM to close all, zR to open all

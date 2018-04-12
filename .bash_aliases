@@ -7,6 +7,7 @@ alias gdb='gdb -q'
 alias xclip='xclip -i -selection clipboard'
 alias soundlvl='amixer | head -5'
 alias set-sense='xinput set-prop "Logitech M510" "Device Accel Constant Deceleration" 2.5'
+alias update='sudo apt update && sudo apt upgrade'
 
 of() {
     firefox "$1" 2>/dev/null

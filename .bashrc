@@ -68,7 +68,7 @@ prompt_if_root() {
 }
 
 if [ "$color_prompt" = yes ]; then
-    PS1='$(prompt_if_root)\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\[\e[01;96m\]$(__git_ps1)\[\e[00m\]$(exitcode)\$\[\e[00m\] '
+    PS1='\[$(prompt_if_root)\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\[\e[01;96m\]$(__git_ps1)\[\e[00m\]\$ '
 else
     PS1='\u@\h:\w\n\$ '
 fi
