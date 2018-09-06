@@ -12,6 +12,7 @@ syntax enable   " enable syntax highlighting
 set t_Co=256
 set t_ut=
 colo codedark
+" colo toy-blocks
 set number "Synatx highlighting
 let loaded_matchparen = 1 " Disable the matched parentheses highlighting
 
@@ -36,6 +37,7 @@ set foldmethod=syntax
 "disable fold highlight
 hi Folded guibg=NONE ctermbg=NONE
 set foldnestmax=1
+set foldlevelstart=99
 
 "set custom text for folding
 let custom_foldtext_max_width=100
