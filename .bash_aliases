@@ -7,10 +7,11 @@ alias gdb='gdb -q'
 alias xclip='xclip -i -selection clipboard'
 alias soundlvl='amixer | head -5'
 alias set-sense='xinput set-prop "Logitech M510" "Device Accel Constant Deceleration" 2.5'
-alias update='apt update -y && apt upgrade -y'
+alias update='sudo apt update -y && sudo apt upgrade -y'
 alias to-hdmi='xrandr --output eDP1 --off --output HDMI1 --auto && pacmd set-default-sink 0'
 alias to-disp='xrandr --output HDMI1 --off --output eDP1 --auto && pacmd set-default-sink 1'
 alias lo='libreoffice'
+alias pingg='ping 8.8.8.8'
 
 
 of() {

@@ -51,3 +51,4 @@ au BufNewFile,BufRead *.tpp set filetype=cpp
 
 set shm=filnxtToOsIF
 set cmdheight=2
+set backspace=indent,eol,start
