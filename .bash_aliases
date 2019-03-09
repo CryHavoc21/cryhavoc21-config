@@ -12,6 +12,8 @@ alias to-hdmi='xrandr --output eDP1 --off --output HDMI1 --auto && pacmd set-def
 alias to-disp='xrandr --output HDMI1 --off --output eDP1 --auto && pacmd set-default-sink 1'
 alias lo='libreoffice'
 alias pingg='ping 8.8.8.8'
+alias cala='cal -A1'
+alias calb='cal -B1'
 
 
 of() {

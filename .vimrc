@@ -1,7 +1,7 @@
-set tabstop=4       "How big is a tab?
-set softtabstop=4   "How many spaces should be intrepreted as a soft tab (for backspace)
+set tabstop=2       "How big is a tab?
+set softtabstop=2   "How many spaces should be intrepreted as a soft tab (for backspace)
 set expandtab       "use spaces instead of tabs (soft tabs)
-set shiftwidth=4    "How much should the width of 'tab columns' be? (also for << and >>)
+set shiftwidth=2    "How much should the width of 'tab columns' be? (also for << and >>)
 set smarttab        "use smart tabs
 set autoindent      "use autoindentation 
 
