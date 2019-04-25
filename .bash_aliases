@@ -4,6 +4,8 @@
 alias t-mute='amixer set Speaker toggle; amixer set Master on'
 alias set-wifi='nmcli r wifi off && nmcli r wifi on'
 alias gdb='gdb -q'
+alias swipl='swipl -q'
+alias feh='feh -.'
 alias xclip='xclip -i -selection clipboard'
 alias soundlvl='amixer | head -5'
 alias set-sense='xinput set-prop "Logitech M510" "Device Accel Constant Deceleration" 2.5'
@@ -14,6 +16,8 @@ alias lo='libreoffice'
 alias pingg='ping 8.8.8.8'
 alias cala='cal -A1'
 alias calb='cal -B1'
+alias calab='cal -A1 -B1'
+alias dup="xfce4-terminal"
 
 
 of() {

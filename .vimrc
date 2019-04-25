@@ -52,3 +52,14 @@ au BufNewFile,BufRead *.tpp set filetype=cpp
 set shm=filnxtToOsIF
 set cmdheight=2
 set backspace=indent,eol,start
+
+let g:rainbow_conf = {
+	\	'ctermfgs': ['yellow', 'green', 'red'],
+  \	'separately': {
+    \		'ocaml': {
+    \			'parentheses': ['start=/(\*\@!/ end=/)/ fold'],
+    \		}
+    \	}
+	\}
+
+let rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
