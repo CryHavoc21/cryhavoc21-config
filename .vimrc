@@ -24,6 +24,8 @@ set comments=sl:/*,mb:\ *,elx:\ */
 
 set hlsearch        "Highlight things that get searched for
 
+set ruler
+
 " https://youtu.be/XA2WjJbmmoM 
 filetype plugin on
 set path+=**
@@ -36,7 +38,7 @@ set showcmd
 set foldmethod=syntax
 "disable fold highlight
 hi Folded guibg=NONE ctermbg=NONE
-set foldnestmax=1
+set foldnestmax=10
 set foldlevelstart=99
 
 "set custom text for folding
@@ -48,13 +50,15 @@ so ~/.vim/CustomFoldText.vim
 
 filetype on
 au BufNewFile,BufRead *.tpp set filetype=cpp
+au BufNewFile,BufRead *.ds set filetype=typescript
+au BufNewFile,BufRead *.isml set filetype=html
 
 set shm=filnxtToOsIF
 set cmdheight=2
 set backspace=indent,eol,start
 
 let g:rainbow_conf = {
-	\	'ctermfgs': ['yellow', 'green', 'red'],
+	\	'ctermfgs': ['red', 'yellow', 'green'],
   \	'separately': {
     \		'ocaml': {
     \			'parentheses': ['start=/(\*\@!/ end=/)/ fold'],
