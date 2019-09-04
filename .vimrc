@@ -48,6 +48,7 @@ so ~/.vim/CustomFoldText.vim
 
 filetype on
 au BufNewFile,BufRead *.tpp set filetype=cpp
+au BufRead,BufNewFile *.v   set filetype=coq
 
 set shm=filnxtToOsIF
 set cmdheight=2
@@ -63,3 +64,8 @@ let g:rainbow_conf = {
 	\}
 
 let rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+nnoremap <F2> :CoqNext<CR>
+nnoremap <F3> :CoqRewind<CR>
+nnoremap <F4> :CoqToCursor<CR>
+
