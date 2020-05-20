@@ -20,8 +20,9 @@ alias calab='cal -A1 -B1'
 alias dup="xfce4-terminal"
 alias la='ls -a'
 alias l='ls'
-alias ll='ls -l'
-alias ltr='ls -ltr'
+alias sl='ls'
+alias ll='ls -lF'
+alias ltr='ls -ltrF'
 
 
 of() {

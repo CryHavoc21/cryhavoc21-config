@@ -7,7 +7,7 @@ if [ "$1" == "-c" ]; then
 fi
 
 # copy files (recursively) from the root folder
-filesToCopy=("vimrc" "bashrc")
+filesToCopy=("vimrc" "bashrc" "inputrc")
 dirToCopy=("bash_plugins" "vim")
 
 # for every file that will be copied, assume it has a . in front 
