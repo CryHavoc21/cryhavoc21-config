@@ -41,7 +41,7 @@ set showcmd
 set foldmethod=syntax
 "disable fold highlight
 hi Folded guibg=NONE ctermbg=NONE
-set foldnestmax=1 " only fold the first level (functions)
+"set foldnestmax=1 " only fold the first level (functions)
 set foldlevelstart=99 " make sure folds are open on file open
 
 "set custom text for folding
