@@ -78,7 +78,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # change the PS2 (the prompt to go to next line)
 export PS2=">>> "
 
-export PATH="$PATH:$HOME/.local/bin/:$HOME/arthur-project/depot_tools/"
+export PATH="$PATH:$HOME/.local/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
