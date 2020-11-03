@@ -25,36 +25,40 @@ font pango:Droid Sans 12
 
 ################### cryhavoc21 edits
 
+exec --no-startup-id setxkbmap -option ctrl:nocaps
+exec --no-startup-id compton -b --backend glx
+
 # screenshots
-bindsym Mod1+F12 exec scrot 
+bindsym Mod4+s exec scrot -e 'mv $f ~/screenshots'
+bindsym Mod4+Shift+s exec --no-startup-id "/usr/local/bin/screen_crop.sh"
 
 # lock
 bindsym Mod4+l exec i3lock -e -i ~/.i3/lock.png
 
 # change audio levels
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master on 5%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master on 5%-
-bindsym XF86AudioMute exec --no-startup-id "amixer set Speaker toggle; amixer set Master on"
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master on 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master on 5%-
+bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse sset Master toggle"
 
 # change brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 
 # media keys
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next 
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+#bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+#bindsym XF86AudioNext exec --no-startup-id playerctl next 
+#bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # set the background
-exec --no-startup-id feh --bg-fill ~/.i3/background.jpg
+exec --no-startup-id feh --bg-fill ~/.i3/background.png
 
 # change mouse options because X is dumb
 
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-#client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
 client.focused_inactive #333333 #5F676A #ffffff #484e50
 client.unfocused        #333333 #424242 #888888 #292d2e
 client.urgent           #C10004 #900000 #ffffff #900000
+#client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
 
 new_window pixel 0 
 
@@ -118,9 +122,9 @@ bindsym Mod1+v split v
 bindsym Mod1+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod1+s layout stacking
-bindsym Mod1+w layout tabbed
-bindsym Mod1+e layout toggle split
+bindsym Mod1+u layout stacking
+bindsym Mod1+i layout tabbed
+bindsym Mod1+o layout toggle split
 
 # toggle tiling / floating
 bindsym Mod1+Shift+space floating toggle
@@ -129,7 +133,7 @@ bindsym Mod1+Shift+space floating toggle
 bindsym Mod1+space focus mode_toggle
 
 # focus the parent container
-bindsym Mod1+a focus parent
+bindsym Mod1+n focus parent
 
 # focus the child container
 #bindsym Mod1+d focus child
@@ -166,9 +170,9 @@ bindsym Mod1+Shift+9 move container to workspace 9
 bindsym Mod1+Shift+0 move container to workspace 10
 
 # reload the configuration file
-bindsym Mod1+Shift+c reload
+bindsym Mod1+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym Mod1+Shift+r restart
+bindsym Mod1+Shift+v restart
 # exit i3 (logs you out of your X session)
 bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
