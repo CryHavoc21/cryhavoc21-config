@@ -26,7 +26,8 @@ set nocompatible
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
 
-set hlsearch        "Highlight things that get searched for
+"Highlight things that get searched for
+set hlsearch        
 
 " https://youtu.be/XA2WjJbmmoM 
 " the 90% of plugins video
@@ -59,8 +60,8 @@ au BufNewFile,BufRead *.tpp set filetype=cpp
 au BufRead,BufNewFile *.v set filetype=coq
 
 " Salesforce propreitary files
-au BufNewFile,BufRead *.ds set filetype=typescript
-au BufNewFile,BufRead *.isml set filetype=html
+"au BufNewFile,BufRead *.ds set filetype=typescript
+"au BufNewFile,BufRead *.isml set filetype=html
 
 " some weird af thing
 set shm=filnxtToOsIF
@@ -70,6 +71,17 @@ set cmdheight=2
 " get backspace to work in insert 
 set backspace=indent,eol,start
 
+" insert mode rebind of ctrl+backspace to delete previous word (terminal)
+"inoremap <C-?> <C-W>
+
+" disable timeouts (ie. for leader key)
+set notimeout
+set ttimeout
+
+" disable the bell
+set visualbell
+
+" rainbowbrackets config
 let g:rainbow_conf = {
 \'ctermfgs': ['red', 'yellow', 'green'],
 \ 'separately': {
@@ -78,7 +90,8 @@ let g:rainbow_conf = {
 \   }
 \ }
 \}
-
 let rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
+" merlin (ocaml plugin, lowkey useless)
+set rtp+=/home/cryhavoc21/.opam/default/share/merlin/vim
 
